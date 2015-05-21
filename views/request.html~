@@ -32,13 +32,13 @@
                     <p class="small ">**Every hour you are able to request 2 free bits, just claim them!</p>
                     <form class="giveaway-form" action="/request" method="post">
                         <script type="text/javascript">
-                            var ACPuzzleOptions = {theme:'white',lang:'en',size:'300x150'};
+                            var RecaptchaOptions = {
+                                theme : 'white'
                             };
                         </script>
                         <script type="text/javascript"
                                 src="https://api-secure.solvemedia.com/papi/challenge.script?k=Mscf5soVNqSrSDmu0kzNbl3f4O5hCs0z">
                         </script>
-		<div id="adcopy-outer">
                         <noscript>
                             <iframe src="https://api-secure.solvemedia.com/papi/challenge.noscript?k=Mscf5soVNqSrSDmu0kzNbl3f4O5hCs0z"
                                     height="300" width="500" frameborder="0"></iframe><br>
@@ -48,7 +48,6 @@
                                    value="manual_challenge"/>
                         </noscript>
                         <input class="right border-button red" type="submit" value="request"/>
-		</div>
                     </form>
                     <script type="text/javascript"
                             src="https://api-secure.solvemedia.com/papi/challenge.script?k=Mscf5soVNqSrSDmu0kzNbl3f4O5hCs0z">

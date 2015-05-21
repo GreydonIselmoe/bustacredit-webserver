@@ -8,7 +8,7 @@ var client = new bitcoin.Client({
     port: process.env.BITCOIND_PORT || 8332,
     user: process.env.BITCOIND_USER,
     pass: process.env.BITCOIND_PASS,
-    ssl: true,
+    ssl: false,
     sslStrict: true,
     sslCa: new Buffer(process.env.BITCOIND_CERT || '')
 });

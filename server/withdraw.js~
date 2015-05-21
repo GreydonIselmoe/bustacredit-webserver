@@ -22,17 +22,15 @@ module.exports = function(userId, satoshis, withdrawalAddress, withdrawalId, cal
         }
 
         assert(fundingId);
-		console.log('WD= ', withdrawalAddress);
+
         var amountToSend = (satoshis - 10000) / 1e8;
-		console.log("Amount= ",amountToSend);
         bc.sendToAddress(withdrawalAddress, amountToSend, function (err, hash) {
             if (err) {
-			console.log('WD ',err);
                 if (err.message === 'Insufficient funds')
                     return callback('PENDING');
                 return callback('FUNDING_QUEUED');
             }
-		console.log("HashWD= " ,hash);
+
             db.setFundingsWithdrawalTxid(fundingId, hash, function (err) {
                 if (err)
                     return callback(new Error('Could not set fundingId ' + fundingId + ' to ' + hash + ': \n' + err));

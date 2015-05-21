@@ -72,8 +72,8 @@
                         </div>
                     </div>
                     <div class="large-7 columns">
-                        
-                        <input  class="border-button blue" type="submit" value="Register"/>
+                        <div class="g-recaptcha" data-sitekey="Mscf5soVNqSrSDmu0kzNbl3f4O5hCs0z" data-callback="enableSubmit"></div>
+                        <input id="registerSubmit" style="display: none" class="border-button blue" type="submit" value="Register"/>
                     </div>
                 </div>
             </form>

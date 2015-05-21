@@ -81,7 +81,7 @@ if(req.secure) {
     }
 
     res.header('Cache-Control', 'no-cache');
-    
+    res.header("Content-Security-Policy", "frame-ancestors 'none'");
 
 
   if (!lib.isUUIDv4(sessionId)) {
@@ -151,9 +151,9 @@ app.use(errorHandler);
 var port = process.env.PORT || 3841;
 var sslport = process.env.SSLPORT || 443;
 
-var server = http.createServer(app).listen(port, function() {
-    console.log('Listening on port ', port);
-});
+//var server = http.createServer(app).listen(port, function() {
+//    console.log('Listening on port ', port);
+//});
 
 var secureserver = https.createServer(options, app).listen(sslport, function() {
     console.log('Listening on post ', sslport)
